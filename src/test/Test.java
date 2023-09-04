@@ -31,6 +31,8 @@ public class Test {
 		System.out.println(biciesto(anio));
 		System.out.println("fecha valida");
 		System.out.println(esFechaValida(date));
+		System.out.println("fecha corta");
+		System.out.println(traerFechaCorta(date).toString());
 
 	}
 	
@@ -56,7 +58,15 @@ public class Test {
 		}
 
 	}
+	//+ traerFechaCorta (LocalDate fecha) : String
 
+	public static String traerFechaCorta(LocalDate date) {
+		return date.getDayOfMonth()+"/"+date.getMonthValue()+"/"+date.getYear();
+		
+	}
 	
+
+
+
 	
 }

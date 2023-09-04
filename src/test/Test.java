@@ -1,5 +1,5 @@
 package test;
-
+import modelo.Funciones;
 import java.time.LocalDate;
 import java.time.LocalTime;
 public class Test {
@@ -28,42 +28,18 @@ public class Test {
 		System.out.println("ALGORTIMO BICIESTO");
 		int anio=2022;
 		LocalDate date = LocalDate.of(2020, 2, 29);
-		System.out.println(biciesto(anio));
-		System.out.println("fecha valida");
-		System.out.println(esFechaValida(date));
-		System.out.println("fecha corta");
-		System.out.println(traerFechaCorta(date).toString());
+		LocalTime ahora = LocalTime.now();
+		
 
+		System.out.println(Funciones.biciesto(anio));
+		System.out.println("fecha valida");
+		System.out.println(Funciones.esFechaValida(date));
+		System.out.println("fecha corta");
+		System.out.println(Funciones.traerFechaCorta(date).toString());
+		System.out.println("hora corta");
+		System.out.println(Funciones.traerHoraCorta(ahora));
 	}
 	
-	public static boolean biciesto(int anio) {
-		return   ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)) ;
-	}
-	//esFechaValida (LocalDate fecha) : boolean
-	//En el caso de ser bisiesto es válido el día 29/02
-
-
-	public static boolean esFechaValida(LocalDate date) {
-		
-		int anio=2020;
-		boolean bisi=true;
-		System.out.println( bisi=biciesto(anio));
-		if (bisi==true) {
-//			
-			System.out.println(date);
-			return true;
-		}
-		else {
-			return false;
-		}
-
-	}
-	//+ traerFechaCorta (LocalDate fecha) : String
-
-	public static String traerFechaCorta(LocalDate date) {
-		return date.getDayOfMonth()+"/"+date.getMonthValue()+"/"+date.getYear();
-		
-	}
 	
 
 

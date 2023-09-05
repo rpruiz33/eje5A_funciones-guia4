@@ -32,12 +32,30 @@ public class Test {
 		
 
 		System.out.println(Funciones.biciesto(anio));
-		System.out.println("fecha valida");
+		System.out.println("FECHA VALIDA");
 		System.out.println(Funciones.esFechaValida(date));
-		System.out.println("fecha corta");
+		System.out.println("FECHA CORTA");
 		System.out.println(Funciones.traerFechaCorta(date).toString());
-		System.out.println("hora corta");
+		System.out.println("HORA CORTA");
 		System.out.println(Funciones.traerHoraCorta(ahora));
+		System.out.println("TRAER DIA DE LA SEMANA");
+		System.out.println(Funciones.traerDiaDeLaSemana(date));
+		System.out.println("TRAER MES EN LETRAS");
+		System.out.println(Funciones.traerMesEnLetras(date));
+		System.out.println("TRAER FECHA LARGA");
+		System.out.println(Funciones.traerFechaLarga(date));
+		System.out.println("TRAER CANTIDAD DE DIAS DEL MES");
+		System.out.println(Funciones.traerCantDiasDeUnMes(2021, 2));
+		System.out.println("APROXIMACION DE 2 DECIMAL");
+		System.out.println(Funciones.aproximar2Decimal(2.335));
+		System.out.println("ES NUMERO");
+		System.out.println(Funciones.esNumero('1'));
+		System.out.println("ES LETRA");
+		System.out.println(Funciones.esLetra('1'));
+		System.out.println("ES CADENA DE NUMEROS");
+		System.out.println(Funciones.esCadenaNros("######"));
+		System.out.println("ES CADENA DE LETRAS");
+		System.out.println(Funciones.esCadenaLetras("&&&"));
 	}
 	
 	

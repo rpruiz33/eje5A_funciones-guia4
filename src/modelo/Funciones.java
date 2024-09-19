@@ -12,18 +12,21 @@ public class Funciones {
 	// En el caso de ser bisiesto es válido el día 29/02
 
 	public static boolean esFechaValida(LocalDate date) {
-
-		int anio = 2020;
-//		boolean bisi=true;
-//		System.out.println( bisi=biciesto(anio));
-		if (biciesto(anio) == true) {
-//			
-			System.out.println(date);
-			return true;
-		} else {
-			return false;
+		int anio =date.getYear();
+		boolean aux=false;
+		if (biciesto(anio)) {
+			if (date.getMonthValue()==2 && date.getDayOfMonth()==29) {
+				System.out.println(date);
+				aux=true;
+			}
+	
 		}
-
+		System.out.println(date);
+		aux=true;
+		return aux;
+		
+			
+	
 	}
 	// + traerFechaCorta (LocalDate fecha) : String
 
@@ -68,33 +71,34 @@ public class Funciones {
 
 //+ traerCantDiasDeUnMes (int anio, int mes) : int
 	public static int traerCantDiasDeUnMes(int anio, int mes) {
-		
+		int aux=-1;
 		LocalDate date = LocalDate.of(anio, mes, 1);
 		if(biciesto(anio)&&mes==2) {
-			return 29;
-		
+			aux=29;
 		}
 		
 		else {
-		return date.lengthOfMonth();
+			aux= date.lengthOfMonth();
 		}
+		
+		return aux;
 	}
 //	+ aproximar2Decimal (double valor) : double
 //	Si el tercer decimal es mayor o igual 5, suma 1 al segundo decimal
 	public static double aproximar2Decimal(double valor) {
 	   
-	    double valorMultiplicado = valor * 1000;
+	    double valorMultiplicado = valor * 100;
 
 	    int tercerDecimal = (int) valorMultiplicado % 10;
 
 	    if (tercerDecimal >= 5) {
-	        valorMultiplicado = Math.ceil(valorMultiplicado / 10) * 10;
+	        valorMultiplicado = Math.ceil(valorMultiplicado ) ;
 	    } else {
-	        valorMultiplicado = Math.floor(valorMultiplicado / 10) * 10;
+	        valorMultiplicado = Math.floor(valorMultiplicado );
 	    }
 
 
-	    double valorRedondeado = valorMultiplicado / 1000;
+	    double valorRedondeado = valorMultiplicado / 100;
 
 	    return valorRedondeado;
 	}
@@ -111,14 +115,14 @@ public class Funciones {
 	// + esCadenaNros(String cadena) : boolean
 	 
 	 public static boolean esCadenaNros(String cadena) {
-	
+		 boolean aux=false;
 		 for (int i = 0; i < cadena.length(); i++) {
 		 char letra=cadena.charAt(i);
-			 if(Funciones.esLetra(letra)) {
-				 return false;
+			 if(!Funciones.esLetra(letra)) {
+				 aux=true;
 			 }
 		 }
-		 return true;
+		 return aux;
 		
 			 
 		
@@ -126,13 +130,15 @@ public class Funciones {
 	 //+ esCandenaLetras(String cadena) : boolean
 	 
 	 public static boolean esCadenaLetras(String cadena) {
+		 boolean aux=false;
 	for (int i = 0; i <cadena.length(); i++) {
 		 char letra=cadena.charAt(i);
-		if(Funciones.esNumero(letra)) {
-			return false;
+		if(!Funciones.esNumero(letra)) {
+			aux=true;
 		}
+		
 	}
-	return true;
+	return aux;
 	 }
 	 
 }

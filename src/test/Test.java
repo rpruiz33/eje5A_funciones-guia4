@@ -6,28 +6,28 @@ public class Test {
 
 	public static void main(String[] args) {
 //		// TODO Auto-generated method stub
-//		LocalDate date = LocalDate.of(2023, 9, 4);
-//		System.out.println(date);//01-03-2019
-//		System.out.println(date.getYear()); //2019
-//		System.out.println(date.getMonthValue()); //03
-//		System.out.println(date.getDayOfMonth()); //01
-//		
-//		LocalDate dateFuturo = LocalDate.of(2024, 5, 9);
-//		System.out.println(dateFuturo);
-////		System.out.println(dateFuturo.getYear()); //2019
-////		System.out.println(dateFuturo.getMonthValue()); //03
-////		System.out.println(dateFuturo.getDayOfMonth()); //01
-//		System.out.println("COMPARANDO FECHAS-->ANTES");
-//		System.out.println("DATE Y DATEFUTURO --> "+ date.isBefore(dateFuturo));
-//		System.out.println("COMPARANDO FECHAS-->DESPUES");
-//		System.out.println("DATE Y DATEFUTURO --> "+ date.isAfter(dateFuturo));
-//		System.out.println("AGREGANDO MESES a date");
-//		System.out.println(date.plusMonths(4));
-//		System.out.println(date.plusDays(10));
-//		System.out.println(date.minusWeeks(8));
+		LocalDate date = LocalDate.of(2023, 9, 4);
+	System.out.println(date);//01-03-2019
+		System.out.println(date.getYear()); //2019
+		System.out.println(date.getMonthValue()); //03
+		System.out.println(date.getDayOfMonth()); //01
+		
+		LocalDate dateFuturo = LocalDate.of(2024, 5, 9);
+		System.out.println(dateFuturo);
+		System.out.println(dateFuturo.getYear()); //2019
+		System.out.println(dateFuturo.getMonthValue()); //03
+		System.out.println(dateFuturo.getDayOfMonth()); //01
+		System.out.println("COMPARANDO FECHAS-->ANTES");
+		System.out.println("DATE Y DATEFUTURO --> "+ date.isBefore(dateFuturo));
+		System.out.println("COMPARANDO FECHAS-->DESPUES");
+		System.out.println("DATE Y DATEFUTURO --> "+ date.isAfter(dateFuturo));
+		System.out.println("AGREGANDO MESES a date");
+		System.out.println(date.plusMonths(4));
+		System.out.println(date.plusDays(10));
+		System.out.println(date.minusWeeks(8));
 		System.out.println("ALGORTIMO BICIESTO");
 		int anio=2022;
-		LocalDate date = LocalDate.of(2020, 2, 29);
+		LocalDate date12 = LocalDate.of(2020, 2, 29);
 		LocalTime ahora = LocalTime.now();
 		
 
@@ -53,12 +53,13 @@ public class Test {
 		System.out.println("ES LETRA");
 		System.out.println(Funciones.esLetra('1'));
 		System.out.println("ES CADENA DE NUMEROS");
-		System.out.println(Funciones.esCadenaNros("######"));
+		System.out.println(Funciones.esCadenaNros("9999"));
 		System.out.println("ES CADENA DE LETRAS");
-		System.out.println(Funciones.esCadenaLetras("&&&"));
+		System.out.println(Funciones.esCadenaLetras("asds"));
+		System.out.println(Funciones.aproximar2Decimal(12.322));
 	}
 	
-	
+
 
 
 

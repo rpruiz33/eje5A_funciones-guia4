@@ -140,8 +140,13 @@ public class Funciones {
 	}
 	return aux;
 	 }
-	 
-}
-	 
-	 
+	 public static LocalDate traerFechasEntre(LocalDate desde , LocalDate hasta, LocalDate fecha) {
+		 LocalDate f=null;
+		 if ((fecha.isEqual(desde)||fecha.isAfter(desde))&& (fecha.isEqual(hasta)|| fecha.isBefore(hasta))) {
+			 f=fecha;
+		 }
+		 return f;
+	 }
+
+}	 
 	 

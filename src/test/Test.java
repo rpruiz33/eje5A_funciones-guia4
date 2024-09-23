@@ -57,6 +57,10 @@ public class Test {
 		System.out.println("ES CADENA DE LETRAS");
 		System.out.println(Funciones.esCadenaLetras("asds"));
 		System.out.println(Funciones.aproximar2Decimal(12.322));
+		LocalDate f1= LocalDate.of(2023, 3, 20);
+		LocalDate f2= LocalDate.of(2024, 5, 15);
+		LocalDate f3=LocalDate.of(2024, 5, 15);
+		System.out.println(Funciones. traerFechasEntre(f1 , f2, f3));
 	}
 	
 

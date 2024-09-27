@@ -1,7 +1,7 @@
 package modelo;
 
 import java.time.LocalDate;
-
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Funciones {
@@ -147,6 +147,12 @@ public class Funciones {
 		 }
 		 return f;
 	 }
-
+	 public static LocalDateTime traerFechasEntreYhora(LocalDateTime desde , LocalDateTime hasta, LocalDateTime fecha) {
+		 LocalDateTime f=null;
+		 if ((fecha.isEqual(desde)||fecha.isAfter(desde))&& (fecha.isEqual(hasta)|| fecha.isBefore(hasta))) {
+			 f=fecha;
+		 }
+		 return f;
+	 }
 }	 
 	 
